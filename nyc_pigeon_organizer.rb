@@ -1,7 +1,7 @@
 def nyc_pigeon_organizer(data)
   result = {}
-  data.each do |ones, attributes|
-+    attributes.each do |attribute, names|
+  data.each do |label, attributes|
+    attributes.each do |attribute, names|
 +      names.each do |name|
 +        if pigeons_organized[name] == nil
 +          pigeons_organized[name]= {}
