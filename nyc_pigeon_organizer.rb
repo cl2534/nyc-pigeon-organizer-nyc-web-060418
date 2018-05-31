@@ -5,8 +5,8 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         if result[name] == nil
           result[name]= {}
-       
-        elsif result[name][label] == nil
+        end 
+        if result[name][label] == nil
           result[name][label] = []
           result[name][label].push(character.to_s) 
         else
