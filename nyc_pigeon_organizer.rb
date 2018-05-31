@@ -1,20 +1,19 @@
 def nyc_pigeon_organizer(data)
   result = {}
-  data.each do |label, attributes|
-    attributes.each do |attribute, names|
-+      names.each do |name|
-+        if pigeons_organized[name] == nil
-+          pigeons_organized[name]= {}
-+        end
-+        if pigeons_organized[name][ones] == nil
-+          pigeons_organized[name][ones] = []
-+          pigeons_organized[name][ones] << attribute.to_s
-+        else
-+          pigeons_organized[name][ones] << attribute.to_s
-+        end
-+      end
-+    end
-+  end
-+  pigeons_organized
-+end
+  data.each do |label, classes|
+    classes.each do |character, names|
+      names.each do |name|
+        if result[name] == nil
+          result[name]= {}
+       
+        elsif result[name][label] == nil
+          result[name][label] = []
+          result[name][label].push(character.to_s) 
+        else
+          result[name][label].push(character.to_s)
+        end
+      end
+    end
+  end
+  result
 end
